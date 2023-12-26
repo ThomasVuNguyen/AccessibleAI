@@ -15,7 +15,7 @@ Future<String> RunDalle(String hostname, String username, String password, Strin
   final url = await client.run('cd openaiprojects && python3 dalle.py $prompt ${DalleSetting['model']}  ${DalleSetting['size']} ${DalleSetting['quality']} ${DalleSetting['n']}', stderr: false);
   print(utf8.decode(url));
   //client.close();
-  return utf8.decode(url);
+  return utf8.decode(url).replaceAll(RegExp(r'\r'), "");
 }
 
 Future<void> SaveDalleSetting(String model, String size, String quality, String n) async{
@@ -35,4 +35,15 @@ Future<Map<String, String?>> GetDalleSetting() async{
   final n = await prefs.getString('n');
   print('setting retrieved');
   return {'model':model, 'size': size, 'quality': quality, 'n': n};
+}
+
+Future<void> SaveDalleImageInfo(String url) async{
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  await prefs.setString('recenturl', url);
+}
+
+Future<String?> GetDalleImageInfo() async{
+  final SharedPreferences prefs = await SharedPreferences.getInstance();
+  String? recenturl =  await prefs.getString('hostname');
+  return recenturl;
 }

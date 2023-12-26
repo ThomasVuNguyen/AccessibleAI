@@ -23,7 +23,7 @@ class _SettingState extends State<Setting> {
     DalleSetting = await GetDalleSetting();
     model = (DalleSetting['model'] == null)? 'dall-e-2' : DalleSetting['model'];
     quality = (DalleSetting['quality'] == null)? 'standard' :DalleSetting['quality'];
-    size = (DalleSetting['size']  == null)? '1024x1024' :DalleSetting['size'];
+    size = (DalleSetting['size']  == null)? '256x256' :DalleSetting['size'];
     setState(() {
     });
   }

@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'credentials.dart';
 import 'homepage.dart';
-
+String defaultImage = 'assets/logo.png';
 Future<void> main() async {
   runApp(
       MultiProvider(
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Demo',debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
