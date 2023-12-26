@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 
 import 'credentials.dart';
 import 'homepage.dart';
-String defaultImage = 'assets/logo.png';
+String defaultImage = 'https://github.com/ThomasVuNguyen/AccessibleAI/blob/main/assets/logo.png?raw=true';
 Future<void> main() async {
   runApp(
       MultiProvider(

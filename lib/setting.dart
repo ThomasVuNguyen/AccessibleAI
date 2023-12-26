@@ -35,7 +35,7 @@ class _SettingState extends State<Setting> {
         children: [
           Row(
             children: [
-              const Text('Model'),
+              const Text('Model  '),
               DropdownButton(
                 value: model,
                   items: const [
@@ -57,7 +57,7 @@ class _SettingState extends State<Setting> {
           ),
           Row(
             children: [
-              Text('Quality'),
+              Text('Quality  '),
               DropdownButton(
                 value: quality,
                   items: const [
@@ -77,7 +77,7 @@ class _SettingState extends State<Setting> {
 
           Row(
             children: [
-              Text('Resolution'),
+              Text('Resolution  '),
               DropdownButton(
                 value: size,
                   items: const [
