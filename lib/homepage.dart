@@ -147,6 +147,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Container(
                         width: ScreenWidth * 0.7,
+                        height: ScreenWidth *0.2,
                         child:
                           Image(
                             image: NetworkToFileImage(
